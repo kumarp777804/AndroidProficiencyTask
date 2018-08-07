@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ProficiencyTask</string>
+
+    <string name="please_wait">Please Wait...</string>
+    <string name="check_network">Please check the network connection</string>
+    <string name="warning">Warning</string>
+    <string name="okay">Ok</string>
+</resources>

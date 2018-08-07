@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Font dimensions-->
+    <dimen name="font_title">20sp</dimen>
+    <dimen name="font_sub_title">18sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+
+    <!--spacing dimensions-->
+    <dimen name="regular_space">10dp</dimen>
+    <dimen name="regular_image">60dp</dimen>
+</resources>
