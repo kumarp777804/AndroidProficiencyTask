@@ -8,8 +8,12 @@ pipeline {
         bat  './gradlew clean --info'
       }
     }
-    wrap([$class: 'TimestamperBuildWrapper']) {
-    build
+    stage('Deploy'){
+      step{
+       bat 'gradlew.bat clean build --info' 
+      }
+    }
+    
 }
     
     
