@@ -1,9 +1,6 @@
 pipeline {
   agent any
-  options {
-    // Stop the build early in case of compile or test failures
-    skipStagesAfterUnstable()
-  }
+  
   stages {
     stage('Build') {
       steps {
@@ -20,7 +17,7 @@ pipeline {
     stage('Testing') {
       steps {
         // Compile the app and its dependencies
-        bat  './gradlew assembleDebug --info'
+        bat  './gradlew clean --info'
       }
     }
     stage('deployment') {
