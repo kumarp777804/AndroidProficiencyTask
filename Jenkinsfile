@@ -39,11 +39,11 @@ pipeline {
         androidLint pattern: '**/lint-results-*.xml'
       }
     }
-    stage('Deploy') {
-      when {
+    //stage('Deploy') {
+     // when {
         // Only execute this stage when building from the `beta` branch
-        branch 'beta'
-      }
+       // branch 'beta'
+     // }
       // environment {
         // Assuming a file credential has been added to Jenkins, with the ID 'my-app-signing-keystore',
         // this will export an environment variable during the build, pointing to the absolute path of
@@ -63,18 +63,18 @@ pipeline {
         // Upload the APK to Google Play
     //    androidApkUpload googleCredentialsId: 'Google Play', apkFilesPattern: '**/*-release.apk', trackName: 'beta'
    //   }
-      post {
-        success {
+    //  post {
+    //    success {
           // Notify if the upload succeeded
       //    mail to: 'beta-testers@example.com', subject: 'New build available!', body: 'Check it out!'
-        }
-      }
-    }
+   //     }
+     // }
+   // }
   }
-  post {
-    failure {
+ // post {
+   // failure {
       // Notify developer team of the failure
    //   mail to: 'android-devs@example.com', subject: 'Oops!', body: "Build ${env.BUILD_NUMBER} failed; ${env.BUILD_URL}"
-    }
-  }
+   // }
+ // }
 }
