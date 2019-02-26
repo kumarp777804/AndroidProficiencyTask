@@ -5,13 +5,14 @@ pipeline {
     stage('Build') {
       steps {
         // Compile the app and its dependencies
-        bash  './gradlew clean --info'
+        chmod +x gradlew
+        sh  './gradlew clean --info'
       }
     }
     
     stage('Building'){
       steps{
-       bash './gradlew compileDebug --stacktrace --info' 
+       bat './gradlew compileDebug --stacktrace --info' 
       }
     }
     
