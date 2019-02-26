@@ -5,8 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         // Compile the app and its dependencies
-        chmod +x gradlew
-        sh  './gradlew clean --info'
+        sh  'chmod +x gradlew clean --info'
       }
     }
     
