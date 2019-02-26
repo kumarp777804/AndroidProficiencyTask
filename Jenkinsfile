@@ -5,6 +5,12 @@ pipeline {
  //   skipStagesAfterUnstable()
  // }
   stages {
+    stage('Clean') {
+      steps {
+        // Compile the app and its dependencies
+        bat  './gradlew clean --info'
+      }
+    }
     stage('Compile') {
       steps {
         // Compile the app and its dependencies
