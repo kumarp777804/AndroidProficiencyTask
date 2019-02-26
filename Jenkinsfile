@@ -9,7 +9,7 @@ pipeline {
       }
     }
     stage('Deploy'){
-      step{
+      steps{
        bat 'gradlew.bat clean build --info' 
       }
     }
