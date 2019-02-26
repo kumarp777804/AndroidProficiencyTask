@@ -16,7 +16,7 @@ pipeline {
     stage('Sonar') {
       steps {
         // Compile the app and its dependencies
-        bat  './gradlew assembleDebug --info'
+        bat  './gradlew --info sonarqube'
       }
     }
     stage('Testing') {
