@@ -8,7 +8,7 @@ pipeline {
     stage('Compile') {
       steps {
         // Compile the app and its dependencies
-        sh './gradlew assembleDebug//compileDebugSources'
+        bat  './gradlew assembleDebug//compileDebugSources'
       }
     }
     
